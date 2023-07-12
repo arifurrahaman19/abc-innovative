@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
+import ServicePages from "@/modules/Services/ServicePagesComponent";
 
 const ServicesPage = () => {
-  return <div>ServicesPage</div>;
+  return <ServicePages />;
 };
 
 export default ServicesPage;

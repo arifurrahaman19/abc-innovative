@@ -1,0 +1,13 @@
+[data-aos="image-skew"] {
+  /* transform: perspective(900px) rotateX(50deg); */
+  transform: perspective(900px) rotateX(30deg);
+
+  &.aos-animate {
+    transform: perspective(900px) rotateX(0deg);
+  }
+}
+
+[data-aos-easing="image-skew-easing"] {
+  transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+  /* transition-timing-function: steps(6, start), cubic-bezier(0.1, 0.7, 1, 0.1); */
+}

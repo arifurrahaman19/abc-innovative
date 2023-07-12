@@ -1,6 +1,7 @@
 "use client";
-import NavLink from "@/components/Common/NavLink";
+import NavLink from "@/modules/Common/NavLink";
 import { twMerge } from "tailwind-merge";
+import "./navbar.css";
 
 const NavLinkList = ({ className }: { className: string }) => {
   const NAVBAR_LINKS = [
@@ -23,7 +24,7 @@ const NavLinkList = ({ className }: { className: string }) => {
   ];
 
   return (
-    <div className={twMerge(`flex ${className}`)}>
+    <div className={twMerge(`hidden sm:flex ${className}`)}>
       {NAVBAR_LINKS.map((item, i) => {
         return <NavLink href={item.url} title={item.title} key={i} />;
       })}

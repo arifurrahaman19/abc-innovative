@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .active-link {
+    @apply after:content-[''] after:block after:w-2 after:h-2 after:bg-[#90E900] after:rounded-full after:absolute after:left-1/2 after:-bottom-1 after:transform after:-translate-x-1/2;
+  }
+}

@@ -1,7 +1,8 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 interface ButtonInterface {
-  title: string;
+  title?: string;
   children?: React.ReactNode;
   onClick: () => void;
   color?: "primary" | "secondary" | "success" | "error" | "info" | "warning" | string;
@@ -30,7 +31,9 @@ const Button = (props: ButtonInterface) => {
 
   return (
     <button
-      className={`border text-white rounded-md px-4 py-2 transition duration-500 ease select-none focus:outline-none focus:shadow-outline ${getClassForTypeAndVariant()} ${calssName}`}
+      className={twMerge(
+        `border text-white rounded-md px-4 py-2 transition duration-500 ease select-none focus:outline-none focus:shadow-outline ${getClassForTypeAndVariant()} ${calssName}`
+      )}
       onClick={onClickHandler}
     >
       {children || title}

@@ -1,7 +1,5 @@
+import HomePageComponent from "@/modules/Home/HomePageComponent";
+
 export default function Home() {
-  return (
-    <div>
-      <a href="/">Click</a>
-    </div>
-  );
+  return <HomePageComponent />;
 }

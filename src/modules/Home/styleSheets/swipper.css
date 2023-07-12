@@ -1,0 +1,18 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  @apply w-10/12 mx-auto;
+  transition: 1s all ease-in-out;
+}
+
+.swiper-slide-active {
+  @apply w-full;
+  transition: 1s all ease-out;
+}
+
+.swiper-slide-prev {
+  transition: 1s all cubic-bezier(0.32, 0, 0.67, 0);
+}

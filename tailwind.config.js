@@ -19,12 +19,18 @@ module.exports = {
       colors: {
         primary: {
           100: "#e0e3ff",
-          700: "#6571ff",
+          300: "#BCF266",
+          700: "#90E900",
+        },
+        neutral: {
+          500: "#1E2A37",
+          600: "#172029",
         },
         secondary: "#8b5cf6",
       },
       fontFamily: {
         lexend: ["Lexend", "sans-serif"],
+        publicSans: ["Public Sans", "sans-serif"],
       },
     },
   },

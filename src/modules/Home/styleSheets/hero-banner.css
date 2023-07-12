@@ -1,0 +1,116 @@
+.animation-1 {
+  background: linear-gradient(to right, #90e900, #90e900) white;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  /* background-size: 0% auto; */
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: anim1 12000ms linear infinite;
+}
+
+.animation-2 {
+  background: linear-gradient(to right, #efe600, #efe600) white;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: anim2 12000ms linear infinite;
+}
+
+.animation-3 {
+  background: linear-gradient(to right, #90e900, #efe600) white;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: 0% auto;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: anim3 12000ms linear infinite;
+}
+
+.animation-btn {
+  background: linear-gradient(to right, #bcf266, #bcf266) white;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  color: #1e2a37;
+  border: 1px solid transparent;
+  animation: anim-button-1 12000ms linear infinite;
+}
+
+@keyframes anim1 {
+  /* to {
+    background-size: 100% auto;
+    background-position: 0 200%;
+  } */
+  0% {
+    background-size: 0% auto;
+  }
+  25% {
+    background-size: 100% auto;
+  }
+  75% {
+    background-size: 100% auto;
+  }
+  100% {
+    background-size: 100% auto;
+    background-position: 0 200%;
+  }
+}
+@keyframes anim2 {
+  0% {
+    background-size: 0% auto;
+  }
+  25% {
+    background-size: 0% auto;
+  }
+  50% {
+    background-size: 100% auto;
+  }
+  100% {
+    background-size: 100% auto;
+    background-position: 0 200%;
+  }
+}
+@keyframes anim3 {
+  0% {
+    background-size: 0% auto;
+  }
+  50% {
+    background-size: 0% auto;
+  }
+  85% {
+    background-size: 100% auto;
+  }
+  100% {
+    background-size: 100% auto;
+    background-position: 0 200%;
+  }
+}
+
+@keyframes anim-button-1 {
+  0% {
+    background: linear-gradient(to right, #bcf266, #bcf266);
+  }
+  25.5% {
+    background: linear-gradient(to right, #bcf266, #bcf266);
+  }
+  25.501% {
+    background: linear-gradient(to right, #f5f066, #f5f066);
+  }
+  50% {
+    background: linear-gradient(to right, #f5f066, #f5f066);
+  }
+
+  50.01% {
+    background: linear-gradient(to right, #90e900, #efe600);
+  }
+
+  100% {
+    background: linear-gradient(to right, #90e900, #efe600);
+  }
+}

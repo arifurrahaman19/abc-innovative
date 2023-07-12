@@ -1,0 +1,3 @@
+.image {
+  @apply h-12 w-auto mr-4 last:mr-0;
+}

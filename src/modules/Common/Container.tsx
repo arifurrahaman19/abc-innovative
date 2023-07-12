@@ -6,7 +6,7 @@ interface ContainerInterface {
 }
 const Container = (props: ContainerInterface) => {
   const { children, className } = props;
-  return <div className={`px-4 mx-auto ${className}`}>{children}</div>;
+  return <div className={`container px-4 mx-auto ${className}`}>{children}</div>;
 };
 
 export default Container;
