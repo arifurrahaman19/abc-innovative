@@ -1,23 +1,49 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import AOS from "aos";
+import Link from "next/link";
 import Container from "@/modules/Common/Container";
 import NavLinkList from "./NavLinkList";
 import ABCLOGO from "../assets/svg/abc-logo.svg";
-import Link from "next/link";
+import MegaMenu from "./MegaMenu";
 
 const Navbar = () => {
-  return (
-    <div className="h-16 w-full">
-      <Container>
-        <div className="flex items-center">
-          <Link href="/">
-            <ABCLOGO className="h-14 w-auto" />
-          </Link>
-          <NavLinkList className="ml-auto" />
-        </div>
-      </Container>
-    </div>
-  );
+	const [megaMenuOpen, setMegaMenuOpen] = useState(false);
+	const [megaMenu, setMegaMenu] = useState("");
+	const [isHoverLink, setIsHoverLink] = useState("home");
+
+	const openMegamenue = (hover: any, href: any) => {
+		if (hover === "enter") {
+			setIsHoverLink(href);
+		}
+
+		if (href !== "home" && href !== "blog") {
+			if (hover === "enter") {
+				setMegaMenuOpen(true);
+				setMegaMenu(href);
+			}
+		} else {
+			setMegaMenuOpen(false);
+		}
+	};
+
+	useEffect(() => {
+		AOS.init({ startEvent: "scroll", once: false });
+	}, []);
+
+	return (
+		<div className="h-16 w-full">
+			<Container>
+				<div className="flex items-center relative">
+					<Link href="/">
+						<ABCLOGO className="h-14 w-auto" />
+					</Link>
+					<NavLinkList openMegamenue={openMegamenue} className="ml-auto" isHoverLink={isHoverLink} />
+					{megaMenuOpen ? <MegaMenu onMouseLeave={() => setMegaMenuOpen(false)} /> : ""}
+				</div>
+			</Container>
+		</div>
+	);
 };
 
 export default Navbar;

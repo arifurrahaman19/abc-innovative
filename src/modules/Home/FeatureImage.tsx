@@ -10,7 +10,7 @@ const FeatureImage = () => {
   }, []);
 
   return (
-    <section className="flex items-center justify-center py-20">
+    <section className="flex items-center justify-center py-12 sm:py-20">
       <Image
         data-aos="image-skew"
         data-aos-offset="300"
